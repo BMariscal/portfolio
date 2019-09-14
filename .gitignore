@@ -1,0 +1,9 @@
+src/client/node_modules/
+.idea
+scripts/.env_dev.sh
+scripts/env_script.sh
+scripts/run.sh
+.env
+venv/
+src/backend/database/config.py
+

@@ -1,0 +1,13 @@
+body {
+  padding: 30px 100px;
+}
+
+input {
+  padding: 10px 20px;
+}
+
+.ow {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
