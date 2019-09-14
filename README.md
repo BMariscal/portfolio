@@ -1,4 +1,4 @@
-# briceidam
+# [briceidam](https://briceidam.com/)
 
 One Paragraph of project description goes here
 
