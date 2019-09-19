@@ -81,8 +81,11 @@ const Main = () => {
                   <h2> Briceida </h2>
                   <h3> (pronounced Bree-say-dah) </h3>
                   <p>
-                    FullStack Software Engineer with 1.5 years of experience
-                    as a web application backend Software Engineer.
+                    Hey! I'm Briceida but I often go by Bri/Brie.
+                    I'm a software engineer in San Francisco with industry experience as a backend web developer at a SaaS startup.
+                    In my spare time, I volunteer as a mentor with Techtonica, draw and paint miniatures.
+                    <br/>
+                    You can read more about my software engineering journey <a href="https://medium.com/engineers-optimizely/from-security-guard-to-backend-engineer-how-the-i-own-it-scholarship-changed-my-life-ebf1d370ffc3"> here. </a>
                   </p>
                   <div>
                   <h4 class="big-tag"> Skills & Experience  </h4>
@@ -97,9 +100,9 @@ const Main = () => {
                   <div className="skills">
                   <ul>
                     <li className="grow">Webapp2, Flask, Django, Node.js</li>
-                    <li className="grow">AWS, GCP, Docker, Kubernetes</li>
-                    <li className="grow">MySQL, PostgresSQL, Google Cloud datastore, MongoDB </li>
-                    <li className="grow">Redis, Celery, Memcached</li>
+                    <li className="grow">Airflow, AWS, GCP, Docker, Kubernetes</li>
+                    <li className="grow">MySQL, PostgresSQL, GCP datastore, MongoDB </li>
+                    <li className="grow">Redis, Memcached, Celery</li>
                     <li className="grow">React, Redux</li>
                     <li className="grow">Auth0</li>
                     <li className="grow">GraphQL</li>

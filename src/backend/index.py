@@ -1,41 +1,45 @@
-import json
-from flask import Flask, make_response, request, redirect, url_for
+from flask import Flask, make_response, request, redirect, url_for, jsonify
+from flask_cors import CORS,cross_origin
 from .database import models
 
 app = models.app
 db = models.db
 Blog = models.Blog
 
-@app.route('/')
+app.config['CORS_HEADERS'] = 'Content-Type'
+
+CORS(app, support_credentials=True)
+
+
+@app.route('/',  methods=['GET','OPTIONS'])
 def root():
-    return make_response(json.dumps('Welcome!'))
+    return make_response(jsonify('Welcome!'))
 
 
-@app.route('/entry/<id>')
+@app.route('/entry/<id>', methods=['GET','OPTIONS'])
+@cross_origin(supports_credentials=True)
 def fetch_blog_entry(id):
     blog = Blog.query.get(id)
-
     arr = []
     obj = {"id": blog.id , "date": blog.date.strftime('%m/%d/%Y'), "title": blog.title, "summary": blog.summary, "content": blog.content}
     arr.append(obj)
-    resp = make_response(json.dumps(arr))
-    resp.headers['Access-Control-Allow-Origin'] = '*'
+    resp = make_response(jsonify(arr))
     return resp
 
-@app.route('/blogs')
+
+@app.route('/blogs', methods=['GET','OPTIONS'])
+@cross_origin(supports_credentials=True)
 def fetch_all_blog_entries():
     blog_post = Blog.query.all()
-
     arr = []
     for blog in blog_post:
         obj = {"id": blog.id, "date": blog.date.strftime('%m/%d/%Y'),"title": blog.title, "summary": blog.summary, "content": blog.content}
         arr.append(obj)
-    resp = make_response(json.dumps(arr))
-    resp.headers['Access-Control-Allow-Origin'] = '*'
+    resp = make_response(jsonify(arr))
     return resp
 
 
-@app.route('/create_post', methods = ['POST'])
+@app.route('/create_post', methods=['POST', 'OPTIONS'])
 def create_blog_entry():
     if request.method == 'POST':
         title = request.form['title']
@@ -45,10 +49,9 @@ def create_blog_entry():
         new_blog = Blog(title=title, summary=summary, content=content)
         db.session.add(new_blog)
         db.session.commit()
-        resp = make_response(json.dumps('Entity created'))
+        resp = make_response(jsonify('Entity created'))
     else:
-        resp = make_response(json.dumps('Incorrect request method'))
-    resp.headers['Access-Control-Allow-Origin'] = '*'
+        resp = make_response(jsonify('Incorrect request method'))
     return resp
 
 

@@ -4,6 +4,9 @@ import { Fetch } from "react-request";
 
 const localStorage = window.localStorage;
 
+const API_KEY = process.env.API_KEY;
+const URL =`https://briceidamariscal-eval-prod.apigee.net/briceidaomars/blogs?apikey=${API_KEY}`
+
 class FetchAllBlogEntries extends React.Component {
   constructor(props) {
     super(props);
@@ -11,7 +14,8 @@ class FetchAllBlogEntries extends React.Component {
 
   render() {
     return (
-      <Fetch url="https://localhost:5000/blogs">
+      <Fetch
+      url={URL}>
         {({ fetching, failed, data }) => {
           if (fetching) {
             return (<div></div>)

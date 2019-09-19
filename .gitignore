@@ -6,4 +6,5 @@ scripts/run.sh
 .env
 venv/
 src/backend/database/config.py
+src/client/.env
 
