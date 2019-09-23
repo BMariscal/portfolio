@@ -1,11 +1,12 @@
 import React from "react";
 import Projects from './Projects';
+import Misc from './Misc';
 
 
 const Main = () => {
   return (
     <div>
-      <header>
+      <header className="card dark-mode">
         <section id="main">
           <div className="container">
             <div className="row">
@@ -16,7 +17,7 @@ const Main = () => {
                     fontFamily:
                       "Lato, PingFang SC, Microsoft YaHei, sans-serif;"
                   }}
-                  className="btn btn-outline-light btn-lg simple"
+                  className="btn card"
                   href="https://www.linkedin.com/in/briceida-mariscal/"
                   target="_blank"
                 >
@@ -29,7 +30,7 @@ const Main = () => {
                     fontFamily:
                       "Lato, PingFang SC, Microsoft YaHei, sans-serif;"
                   }}
-                  className="btn btn-outline-light btn-lg simple"
+                  className="btn card"
                   href="https://www.github.com/BMariscal/"
                   target="_blank"
                 >
@@ -42,7 +43,7 @@ const Main = () => {
                     fontFamily:
                       "Lato, PingFang SC, Microsoft YaHei, sans-serif;"
                   }}
-                  className="btn btn-outline-light btn-lg simple"
+                  className="btn card"
                   href="https://twitter.com/briceidamars"
                   target="_blank"
                 >
@@ -54,7 +55,7 @@ const Main = () => {
                     fontFamily:
                       "Lato, PingFang SC, Microsoft YaHei, sans-serif;"
                   }}
-                  className="btn btn-outline-light btn-lg simple"
+                  className="btn card"
                   href="https://deviantart.com/bmariscal/"
                   target="_blank"
                 >
@@ -66,18 +67,18 @@ const Main = () => {
         </section>
       </header>
       <section id="aboutme">
-        <div class="section first-section">
-          <div class="container">
-            <div class="row">
-              <div class="row align-items-center justify-content-around">
-                <div class="col-12 col-lg-5">
+        <div className="section first-section dark-mode">
+          <div className="container dark-mode">
+            <div className="row">
+              <div className="row align-items-center justify-content-around">
+                <div className="col-12 col-lg-5">
                   <img
-                    class="img-fluid"
+                    className="img-fluid card brd"
                     src="https://i.imgur.com/bPuyQ23.jpg"
                     alt="me-again"
                   ></img>
                 </div>
-                <div class="col-12 col-lg-5">
+                <div className="col-12 col-lg-5">
                   <h2> Briceida </h2>
                   <h3> (pronounced Bree-say-dah) </h3>
                   <p>
@@ -85,20 +86,20 @@ const Main = () => {
                     I'm a software engineer in San Francisco with industry experience as a backend web developer at a SaaS startup.
                     In my spare time, I volunteer as a mentor with Techtonica, draw and paint miniatures.
                     <br/>
-                    You can read more about my software engineering journey <a href="https://medium.com/engineers-optimizely/from-security-guard-to-backend-engineer-how-the-i-own-it-scholarship-changed-my-life-ebf1d370ffc3"> here. </a>
+                    You can read more about my software engineering journey <a href="https://medium.com/engineers-optimizely/from-security-guard-to-backend-engineer-how-the-i-own-it-scholarship-changed-my-life-ebf1d370ffc3"> <i>here.</i> </a>
                   </p>
                   <div>
-                  <h4 class="big-tag"> Skills & Experience  </h4>
+                  <h4 className="big-tag"> Skills & Experience  </h4>
                   <div className="skills-name">
                   <div className="skills">
-                  <ul>
+                  <ul className="card1">
                     <li className="grow">Python and JavaScript</li>
                   </ul>
                   </div>
                   </div>
                   <div className="skills-name">
                   <div className="skills">
-                  <ul>
+                  <ul className="card1">
                     <li className="grow">Webapp2, Flask, Django, Node.js</li>
                     <li className="grow">Airflow, AWS, GCP, Docker, Kubernetes</li>
                     <li className="grow">MySQL, PostgresSQL, GCP datastore, MongoDB </li>
@@ -118,13 +119,13 @@ const Main = () => {
       </section>
         <div>
        {<Projects/>}
+       {<Misc/>}
       <footer>
-
-          <div class="row align-items-center justify-content-around text-muted">
+          <div className="row align-items-center justify-content-around text-muted">
           <a
             href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=briceidamariscal@gmail.com"
             target="_blank">
-            briceidamariscal@gmail.com
+            created by Briceida
           </a>
         </div>
       </footer>

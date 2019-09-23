@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Render, Link } from "react-router-dom";
 import NavigationBar from "../NavigationBar";
+import FetchEntryContent from "./FetchEntryContent";
 
 
 const localStorage = window.localStorage;
@@ -15,7 +16,8 @@ class BlogEntry extends React.Component {
     const ID = this.props.item.id;
     const title = this.props.item.title;
     const summary = this.props.item.summary;
-    const url = "/post";
+    const url = "/" + title.split(' ').join('-') + '-' + ID;
+
 
     const params = {
       pathname: url,
@@ -26,7 +28,7 @@ class BlogEntry extends React.Component {
 
     return (
         <div id="post">
-          <Link to={params}>
+          <Link className="no-link" to={params}>
             <h2> {title}</h2>
             <h6>{summary} </h6>
           </Link>

@@ -1,12 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import NavigationBar from "./components/NavigationBar";
 import Home from "./components/Home";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-const App = () => {
+const App = (props) => {
   return (
-    <div>
-      <Home />
-    </div>
+    <Router>
+    <NavigationBar/>
+    <Home {...props}/>
+    </Router>
   );
 };
 export default App;

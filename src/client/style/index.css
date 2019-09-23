@@ -1,12 +1,14 @@
 html, body {
-  color: #686565;
   padding: 0px;
   height: 100%;
   width: 100%;
   overflow-x: hidden;
   font-weight: 200;
-
+  background-color: #f5f5f5;
+  color: black;
 }
+
+
 header {
   background-color: #F0F8FF;
   background-image: url("https://i.imgur.com/Vru9L03.jpg");
@@ -20,7 +22,60 @@ header {
   header {
     padding: 200px 0;
   }
+    .dark-mode{
+  background-color: #ffff;
+    }
 }
+
+
+.button1{
+  background-color: white;
+  color: black;
+  border-radius: 2px;
+  padding: 15px 0 32px 0px;
+  outline: none;
+  border-style: solid;
+  border-color: #fafafa;
+  border-width: thin;
+
+}
+
+.card {
+  position: relative;
+   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.card1 {
+  position: relative;
+   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.card2 {
+   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+
+.card:hover {
+  box-shadow: 0 3px 3px rgba(0,0,0,0.25), 0 3px 4px rgba(0,0,0,0.22);
+}
+
+
+.button0{
+background-color: white;
+
+}
+
+.button0:focus{
+    outline:0;
+}
+
+.button0:hover{
+	outline: none;
+	color: #001a33;
+}
+
 
 .first-section {
   background-color: #FBFBFB;
@@ -32,27 +87,45 @@ header {
   margin-bottom: 35px;
 }
 
+.post {
+  width: 90%;
+  margin: auto;
+  word-wrap: break-word;
+}
+
+.brd {
+    border-radius: 10px;
+}
+
 @media (min-width: 768px) {
   .first-section img {
     margin-bottom: 20px;
-  }
+    }
+  .post {
+    width:50%;
+    word-wrap: break-word;
+   }
 }
 
 @media (min-width: 992px) {
   .first-section img {
     margin-bottom: 0;
   }
+  .post {
+    width:50%;
+    word-wrap: break-word;
+  }
+  .container {
+    padding-top: 50px;
+
+  }
+
 }
 
 .section {
-  padding: 60px 0 40px;
+  padding: 60px 10px 40px;
 }
 
-.first-section {
-  margin-left: 10px;
-  margin-right: 10px;
-
-}
 .first-section ul {
   background-color: #F7F9FC;
   border-radius: 8px;
@@ -116,9 +189,9 @@ a { color: inherit;
   margin-right: 8px;
   width: 46px;
 }
+
 .navbar{
 	  height: 70px;
- background-color: white;
 }
 
 .third-section img {
@@ -137,10 +210,9 @@ a { color: inherit;
 }
 
 footer {
-  background-color: #00000;
+  background-color: #f5f5f5;
   padding: 20px;
 }
-
 
 #bg {
 background-color: #f8f9fa;
@@ -152,12 +224,15 @@ width: 20%;
 border-radius: 2px;
 outline-color: #add8e6;
 padding: 20px 0 5px;
-
+}
+.no-link:hover {
+text-decoration: none;
 }
 
-.post {
- width: 100px;
 
+.cooka {
+width: 100%;
+padding-top: 20px;
 }
 
 .center {
@@ -184,13 +259,20 @@ color: #0084b4;
 
 }
 
-.btn {
-line-height: 1em;
+.btn{
+    line-height: 1.1em;
     display: inline-block;
     text-decoration: none;
     padding: 12px;
     margin: 4px;
+    background-color:rgb(245,245,245, 0.8);
+    transition: all .2s
 }
+
+.btn:hover {
+   background-color:rgb(245,245,245, 1);
+}
+
 
 ul {
     list-style-type:none;
@@ -205,9 +287,8 @@ ul {
 }
 
 #projects-div {
-    margin-top: 15px;
-    margin-bottom: 100px;
-
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 
@@ -223,6 +304,10 @@ ul {
 color: #17a2b8;
 margin-top: 50px;
 
+}
+
+.big-tag1 {
+    color: #17a2b8;
 }
 
 .simple {
@@ -257,11 +342,74 @@ margin-top: 50px;
     margin-bottom: 20px;
     margin-top: 20px;
     font-weight: 450;
-
-
+    border-radius: 0px;
 }
 
 .d-flex {
 margin-top: 100px;
+
+}
+
+.flex-container {
+  height: 200px;
+  align-items: center;
+}
+
+.flex-container > div {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 20px;
+}
+
+#div-1{
+  width: 0%;
+}
+
+#div-2{
+  width: 100%;
+}
+
+p {
+  text-justify: inter-word;
+}
+
+#lab_social_icon_footer {
+  padding: 40px 0;
+  background-color: #dedede;
+}
+
+#lab_social_icon_footer a {
+  color: #333;
+}
+
+#lab_social_icon_footer .social:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+#lab_social_icon_footer .social {
+  -webkit-transform: scale(0.8);
+  /* Browser Variations: */
+
+  -moz-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+}
+/*
+    Multicoloured Hover Variations
+*/
+
+#lab_social_icon_footer #social-tw:hover {
+  color: #4099FF;
+}
+
+#lab_social_icon_footer #social-em:hover {
+  color: #f39c12;
+}
+.icons {
+    margin: 5px;
 
 }

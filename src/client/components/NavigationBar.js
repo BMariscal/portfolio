@@ -11,19 +11,12 @@ import {
 import { LinkContainer } from "react-router-bootstrap";
 
 
-class NavigationBar extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-  render() {
+const  NavigationBar  = ()=> {
     return (
-      <Router>
-        <Navbar className="sticky-top" bg="light" expand="lg">
+        <Navbar className="sticky-top card2" bg="light" expand="lg">
           <Navbar.Brand href="/">
             <LinkContainer to="/">
-              <a class="navbar-brand" href="/" className="name-title">
+              <a className="navbar-brand card" href="/" className="name-title">
                 <img src="https://i.imgur.com/bPuyQ23.jpg" alt="me"></img>
                 Briceida Mariscal
               </a>
@@ -35,12 +28,7 @@ class NavigationBar extends React.Component {
               </LinkContainer>
             </Nav>
         </Navbar>
-        <Route path="/" exact component={Main} />
-        <Route path="/blog" exact component={FetchAllBlogEntries} />
-        <Route path="/post" component={FetchEntryContent} />
-      </Router>
     );
-  }
 }
 
 export default NavigationBar;

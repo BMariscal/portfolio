@@ -34,7 +34,7 @@ const MarkdownPost = props => {
     return { __html: md.render(props.content) };
   };
 
-  return <div className="content" dangerouslySetInnerHTML={getRawMarkup()} />;
+  return <div className="content" dangerouslySetInnerHTML={getRawMarkup()}></div>
 };
 
 export default MarkdownPost;

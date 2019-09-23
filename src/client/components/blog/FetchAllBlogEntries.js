@@ -18,7 +18,11 @@ class FetchAllBlogEntries extends React.Component {
       url={URL}>
         {({ fetching, failed, data }) => {
           if (fetching) {
-            return (<div></div>)
+            return( <div className="d-flex justify-content-center">
+                   <div className="spinner-border" role="status">
+                    <span className="sr-only"></span>
+                    </div>
+                    </div>)
           }
 
           if (failed) {
@@ -28,13 +32,12 @@ class FetchAllBlogEntries extends React.Component {
           if (data) {
             localStorage.setItem("blogs", JSON.stringify(data));
               return (
-                <div>
+                <div className="card1 post brd">
                 {data.map(item => (
-                <ul key={item.id} className="center post">
+                <ul key={item.id}>
                 <BlogEntry item={item} />
                 </ul>
             ))}
-                <footer></footer>
                 </div>
             );
           }
