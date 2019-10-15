@@ -28,7 +28,7 @@ Personal website + blog
 
 ## Built With
 
-* [](http://) - The web framework used
+* [](http://) - React, Flask, PostgreSQL, Docker, SQLAlchemy, Alembic
 * [](https://) - Dependency Management
 * [](http://) - Used to generate RSS Feeds
 
