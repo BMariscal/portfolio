@@ -15,7 +15,7 @@ itsdangerous==1.1.0
 jmespath==0.9.4
 Mako==1.1.0
 MarkupSafe==1.1.0
-pip==19.2.3
+pip==21.1
 pipenv==2018.11.26
 psycopg2==2.8.3
 psycopg2-binary==2.8.3
